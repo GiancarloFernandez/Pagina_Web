@@ -1,121 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asesoría de Tesis - Consultores Puno</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="#">
-                <img src="assets/logo.png" alt="Logo de la página" class="logo">
-            </a>
-        </div>
-        <ul class="navbar-menu">
-            <li><a href="#">Inicio</a></li>
-            <li class="dropdown">
-                <a href="#">Nosotros</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Historia</a></li>
-                    <li><a href="#">Misión y Visión</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Libros</a></li>
-            <li><a href="#">Cursos y Diplomados</a></li>
-            <li><a href="#">Contáctanos</a></li>
-        </ul>
-    </nav>
 
-    <!-- Contenido principal -->
-    <header class="hero">
-        <h1>Eleva tu Negocio</h1>
-        <p>Con soluciones SaaS innovadoras para escalabilidad y crecimiento.</p>
-        <a href="#" class="btn-primary">Empezar ahora</a>
-    </header>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Logo Asesoría de Tesis" class="logo">
+      </a>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="contact.html">Contáctanos</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li><a href="services.html">Servicios</a></li>
+    </ul>
+  </nav>
 
-    <section class="dashboard-preview">
-        <h2>Vista previa del Dashboard</h2>
-        <img src="assets/dashboard-placeholder.png" alt="Vista previa del dashboard">
-    </section>
-    
-    <footer class="footer">
-        <div class="footer-top">
-          <div class="footer-stats">
-            <div>
-              <h3>13520+</h3>
-              <p>Alumnos Inscritos</p>
-            </div>
-            <div>
-              <h3>256+</h3>
-              <p>Diplomados, Cursos y Especializaciones</p>
-            </div>
-            <div>
-              <h3>8+</h3>
-              <p>Revistas científicas indexadas</p>
-            </div>
-            <div>
-              <h3>1024+</h3>
-              <p>Artículos publicados de más de 36 países</p>
-            </div>
-          </div>
+  <!-- Carrusel de imágenes -->
+  <div class="carousel">
+    <div class="carousel-slide">
+      <img src="assets/carrusel8.jpg" alt="Asesoría en tesis">
+      <img src="assets/carrusel8.jpg" alt="Artículos académicos">
+    </div>
+  </div>
+
+  <!-- Sección de Bienvenida -->
+  <section class="welcome">
+    <h1>Bienvenido a Asesoría de Tesis</h1>
+    <p>Tu éxito académico es nuestra misión. Ayudamos a estudiantes a desarrollar tesis, artículos académicos, patentes y más.</p>
+    <a href="contact.html" class="btn-primary">Contáctanos</a>
+  </section>
+
+  <!-- Servicios -->
+  <section class="services">
+    <h2>Servicios</h2>
+    <div class="service-box">
+      <img src="assets/tesis.jpg" alt="Asesoría en Tesis">
+      <h3>Asesoría en Tesis</h3>
+      <p>Desarrollamos y asesoramos en todo el proceso de tu tesis, desde la idea hasta la defensa final.</p>
+    </div>
+    <div class="service-box">
+      <img src="assets/libros.jpg" alt="Libros Académicos">
+      <h3>Libros Académicos</h3>
+      <p>Accede a nuestra colección de libros de autoría propia para fortalecer tu investigación.</p>
+    </div>
+    <div class="service-box">
+      <img src="assets/patentes.jpg" alt="Gestión de Patentes">
+      <h3>Gestión de Patentes</h3>
+      <p>Te ayudamos a proteger tu investigación con patentes registradas.</p>
+    </div>
+  </section>
+
+  <!-- Libros Disponibles -->
+  <section class="books">
+    <h2>Libros de Autoría Propia</h2>
+    <div class="book-box">
+      <img src="assets/libro1.jpg" alt="Libro 1">
+      <h3>Libro de Metodología de la Investigación</h3>
+      <p>Guía completa para desarrollar una tesis exitosa desde la investigación hasta la presentación final.</p>
+      <a href="#" class="btn-primary">Ver más</a>
+    </div>
+    <div class="book-box">
+      <img src="assets/libro2.jpg" alt="Libro 2">
+      <h3>Publicaciones Académicas</h3>
+      <p>Cómo transformar tu investigación en un artículo académico aprobado por revistas científicas.</p>
+      <a href="#" class="btn-primary">Ver más</a>
+    </div>
+    <div class="book-box">
+      <img src="assets/libro3.jpg" alt="Libro 3">
+      <h3>Guía para Patentes Académicas</h3>
+      <p>Descubre el proceso para registrar y proteger tu investigación mediante patentes.</p>
+      <a href="#" class="btn-primary">Ver más</a>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-box">
+        <div class="testimonial-img-container">
+          <img src="assets/testimonial1.jpg" alt="Testimonio 1" class="testimonial-img">
         </div>
-        <div class="footer-middle">
-          <div class="footer-info">
-            <h4>Instituto Universitario de Innovación Ciencia y Tecnología Inudi Perú</h4>
-            <p>
-              <strong>Teléfono:</strong> (+51) 973368341 <br>
-              <strong>Dirección:</strong> Urb. Ciudad Jardín MZ. 03 lt.02 Jayllihuaya, Puno Perú <br>
-              <strong>Correo:</strong> info@inudi.edu.pe
-            </p>
-          </div>
-          <div class="footer-links">
-            <div>
-              <h4>Verifica tu certificado</h4>
-              <p>Valida el certificado de Inudi ingresando su DNI/Cédula de identidad o el código de su certificado.</p>
-              <a class="btn-primary" href="#">Verificar Certificado</a>
-            </div>
-            <div>
-              <h4>Conéctate con Inudi</h4>
-              <ul>
-                <li>Coordinación académica</li>
-                <li>Preguntas frecuentes</li>
-                <li>Términos y condiciones</li>
-                <li>Libro de reclamaciones</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Cursos & Diplomados</h4>
-              <ul>
-                <li>Todos</li>
-                <li>Cursos</li>
-                <li>Diplomados</li>
-                <li>Postdoctorado</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Nuestras Revistas Científicas</h4>
-              <ul>
-                <li>Revista Estudios Psicológicos</li>
-                <li>Revista de Acciones Médicas</li>
-                <li>Revista Technological Innovation Journal</li>
-                <li>Revista Innova Educación</li>
-              </ul>
-            </div>
-          </div>
+        <div class="testimonial-text">
+          <p>"Gracias a su asesoría pude desarrollar una tesis sólida y obtener mi grado de maestría. Muy recomendados!"</p>
+          <span>- Juan Pérez, Maestría en Ciencias</span>
         </div>
-        <div class="footer-bottom">
-          <div class="footer-social">
-            <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="assets/icons/youtube.svg" alt="YouTube"></a>
-            <a href="#"><img src="assets/icons/tiktok.svg" alt="TikTok"></a>
-            <a href="#"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
-          </div>
-          <p>Copyright © 2024 Instituto Universitario de Innovación Ciencia y Tecnología Inudi Perú S.A.C.</p>
+      </div>
+      <div class="testimonial-box">
+        <div class="testimonial-img-container">
+          <img src="assets/testimonial2.jpg" alt="Testimonio 2" class="testimonial-img">
         </div>
-      </footer>
-      
+        <div class="testimonial-text">
+          <p>"Los libros y artículos proporcionados me ayudaron a enriquecer mi investigación. Sin duda, la mejor opción."</p>
+          <span>- Ana García, Licenciatura en Derecho</span>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-social">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
+    </div>
+    <p>Copyright © 2024 Asesoría de Tesis - Consultores Puno</p>
+  </footer>
+  <script src="js/carousel.js"></script>
 </body>
 </html>

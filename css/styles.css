@@ -1,162 +1,201 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  /* Barra de navegación */
-  .navbar {
-    background-color: #333;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-logo img {
-    width: 150px;
-  }
-  
-  .navbar-menu {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-menu li {
-    margin: 0 15px;
-  }
-  
-  .navbar-menu li a {
-    color: white;
-    font-size: 16px;
-  }
-  .carousel {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover; /* Ajusta la imagen para cubrir todo el área sin deformarse */
-  }
-  
-  /* Sección de Bienvenida */
-  .welcome {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .welcome h1 {
-    font-size: 36px;
-    color: #333;
-  }
-  
-  .welcome p {
-    font-size: 18px;
-    color: #666;
-  }
-  
-  .welcome .btn-primary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  /* Sección de Servicios */
-  .services {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #fff;
-  }
-  
-  .services h2 {
-    font-size: 28px;
-    color: #333;
-  }
-  
-  .service-box {
-    display: inline-block;
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 1%;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-  }
-  
-  .service-box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .service-box h3 {
-    font-size: 22px;
-    color: #333;
-  }
-  
-  .service-box p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  /* Sección de Libros Disponibles */
-  .books {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .books h2 {
-    text-align: center;
-    font-size: 28px;
-    color: #333;
-  }
-  
-  .book-box {
-    display: inline-block;
-    width: 30%;
-    padding: 20px;
-    text-align: center;
-    margin: 20px 1%;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-  
-  .book-box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .book-box h3 {
-    font-size: 22px;
-    color: #333;
-  }
-  
-  .book-box p {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  /* Sección de Testimonios */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Barra de navegación */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 150px;
+}
+
+.navbar-menu {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.navbar-menu li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.navbar-menu li a {
+  color: white;
+  font-size: 16px;
+}
+
+/* Submenú */
+.navbar-menu li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.navbar-menu li ul li {
+  width: 200px;
+}
+
+.navbar-menu li ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  text-align: left;
+}
+
+.navbar-menu li ul li a:hover {
+  background-color: #555;
+}
+
+/* Mostrar submenú al pasar el cursor */
+.navbar-menu li:hover ul {
+  display: block;
+}
+
+/* Carrusel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el área sin deformarse */
+}
+
+/* Sección de Bienvenida */
+.welcome {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.welcome h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.welcome p {
+  font-size: 18px;
+  color: #666;
+}
+
+.welcome .btn-primary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Sección de Servicios */
+.services {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.services h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.service-box {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 1%;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.service-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.service-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Sección de Libros Disponibles */
+.books {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.books h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+}
+
+.book-box {
+  display: inline-block;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 1%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.book-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.book-box h3 {
+  font-size: 22px;
+  color: #333;
+}
+
+.book-box p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Sección de Testimonios */
 .testimonials {
   background: linear-gradient(to bottom, #002244, #000000); /* Degradado azul marino a negro */
   padding: 50px 20px;
@@ -211,28 +250,27 @@ body {
   color: #f0f0f0; /* Gris claro para contraste */
 }
 
-  /* Footer */
-  .footer {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-  }
-  
-  .footer-social {
-    margin-bottom: 20px;
-  }
-  
-  .footer-social a {
-    margin: 0 10px;
-  }
-  
-  .footer-social img {
-    width: 30px;
-    height: 30px;
-  }
-   
-  
+/* Footer */
+.footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+}
+
 /* ESTILOS FORMULARIO CONTACTANOS */
 /* Estilo General */
 body {

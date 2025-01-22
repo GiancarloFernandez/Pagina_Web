@@ -1,0 +1,212 @@
+/* Aseguramos que el body y html ocupen toda la altura de la página */
+html, body {
+    height: 100%; /* Esto asegura que el contenido ocupe todo el alto de la página */
+    margin: 0; /* Elimina el margen por defecto */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+}
+
+/* Barra de navegación */
+nav {
+    width: 100%;
+    height: 99px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0; /* Se queda en la parte superior */
+    left: 0;
+    z-index: 1000; /* Asegura que se quede por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
+}
+
+/* Contenedor principal de la barra de navegación */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 100% para que ocupe todo el ancho disponible */
+    max-width: 1012px; /* Esto garantiza que el contenido no se salga del frame de 1920px */
+}
+
+/* Logo */
+nav .logo img {
+    width: 55px;
+    height: 53px;
+    border-radius: 45px; /* Border radius del logo */
+}
+
+/* Lista de ítems del menú */
+nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Distancia entre cada ítem */
+}
+
+/* Estilo de los ítems del menú */
+nav .nav-items li {
+    list-style: none;
+}
+
+nav .nav-items a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #000000; /* Color de texto por defecto */
+    padding: 0 10px;
+}
+
+/* Ajuste para el contenido debajo de la barra de navegación */
+body {
+    padding-top: 99px; /* Añadir espacio suficiente para que no se oculte el contenido detrás de la barra */
+    flex-grow: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+}
+
+/* Catálogo de libros */
+#catalogo {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 100px;
+}
+
+/* Título del catálogo */
+#catalogo h1 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333; /* Color del título */
+}
+
+/* Estilo para la grilla de libros */
+#catalogo .book-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 30px;
+    justify-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    min-width: 0; /* Evita que el ancho mínimo de los elementos de la grilla afecte el layout */
+}
+
+/* Estilo para cada libro */
+.book {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    max-width: 350px; /* Máxima anchura para mantener consistencia */
+    width: 100%; /* Asegura que el libro ocupe el 100% de su celda */
+}
+
+/* Imagen de cada libro */
+.book img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Información del libro */
+.book-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.book-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.book-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Aseguramos que el enlace dentro del botón no se subraye ni cambie de color */
+.book button a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del botón */
+}
+
+/* Botón de descarga */
+.book button {
+    padding: 10px 15px;
+    background-color: #69788C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book button:hover {
+    background-color: #0D0D0D;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-top: auto; /* Hace que el footer se mueva al final */
+}
+
+footer .contacto p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+footer .redes a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+footer .redes a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #catalogo .book-container {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    #catalogo h1 {
+        font-size: 32px;
+    }
+
+    .book {
+        width: 100%; /* Asegura que los libros ocupen el 100% de su celda */
+    }
+
+    footer .contacto p {
+        font-size: 16px;
+    }
+
+    footer .redes a img {
+        width: 30px;
+        height: 30px;
+    }
+}

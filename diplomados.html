@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diplomados</title>
+    <link rel="stylesheet" href="css/diplomados.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="logo">
+            <img src="assets/IMANDES_LOGO_REESCALADO.jpg" alt="Logo de la página">
+        </div>
+        <ul class="nav-items">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo de libros</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="diplomados.html">Diplomados</a></li>
+            <li><a href="couch.html">Coach en investigación</a></li>
+            <li><a href="contact.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Descripción de la página -->
+    <section id="descripcion">
+        <h1>Bienvenido a nuestros Diplomados</h1>
+        <p>Explora nuestra variedad de diplomados diseñados para especializarte en áreas clave del conocimiento y potenciar tu desarrollo profesional.</p>
+    </section>
+
+<!-- Carrusel -->
+<section id="carrusel">
+    <div class="carrusel-container">
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 1">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 2">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 3">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 4">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 5">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 6">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 7">
+        </div>
+        <div class="carrusel-item">
+            <img src="assets/Carrusel.jpg" alt="Imagen 8">
+        </div>
+    </div>
+    <!-- Controles -->
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+</section>
+
+    <!-- Lista de diplomados -->
+    <section id="diplomados">
+        <h1>Listado de Diplomados</h1>
+        <div class="diplomado-container">
+            <div class="diplomado">
+                <img src="assets/diplomados.jpg" alt="Imagen del diplomado">
+                <div class="diplomado-info">
+                    <h2>Título del Diplomado: Metodologías de Investigación</h2>
+                    <p><strong>Empresa Patrocinadora:</strong> Centro de Estudios Avanzados</p>
+                    <p><strong>Detalles:</strong> Este diplomado cubre técnicas avanzadas para la planificación y ejecución de investigaciones científicas.</p>
+                    <button onclick="window.location.href='detalles-diplomado1.html'">Conoce más</button>
+                </div>
+            </div>
+            <div class="diplomado">
+                <img src="assets/diplomados.jpg" alt="Imagen del diplomado">
+                <div class="diplomado-info">
+                    <h2>Título del Diplomado: Gestión de Proyectos Académicos</h2>
+                    <p><strong>Empresa Patrocinadora:</strong> Academia Global de Investigación</p>
+                    <p><strong>Detalles:</strong> Aprende a gestionar proyectos académicos de principio a fin, asegurando el éxito en cada etapa.</p>
+                    <button onclick="window.location.href='detalles-diplomado2.html'">Conoce más</button>
+                </div>
+            </div>
+            <div class="diplomado">
+                <img src="assets/diplomados.jpg" alt="Imagen del diplomado">
+                <div class="diplomado-info">
+                    <h2>Título del Diplomado: Innovación y Desarrollo Tecnológico</h2>
+                    <p><strong>Empresa Patrocinadora:</strong> Tech Academy</p>
+                    <p><strong>Detalles:</strong> Especialízate en el desarrollo de tecnologías innovadoras aplicadas a diversas áreas de la investigación.</p>
+                    <button onclick="window.location.href='detalles-diplomado3.html'">Conoce más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contacto">
+            <p>Contáctanos</p>
+            <p><i class="fas fa-phone-alt"></i> Teléfono: 3214567891</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dirección: Cra 123, Ciudad Ficticia</p>
+        </div>
+        <div class="redes">
+            <a href="#"><img src="assets/redes.jpg" alt="YouTube" class="redes-icono"></a>
+            <a href="#"><img src="assets/redes.jpg" alt="Facebook" class="redes-icono"></a>
+            <a href="#"><img src="assets/redes.jpg" alt="Instagram" class="redes-icono"></a>
+            <a href="#"><img src="assets/redes.jpg" alt="Twitter" class="redes-icono"></a>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 8; // Total de imágenes en el carrusel
+        const slidesPerBlock = 4; // Número de imágenes a mostrar a la vez
+        const slideInterval = 3000; // 3 segundos entre cada cambio de bloque
+    
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carrusel-item');
+            const totalBlocks = totalSlides - slidesPerBlock + 1; // Número total de bloques (desplazamiento de 4 imágenes)
+    
+            if (index >= totalBlocks) {
+                currentSlide = 0; // Reinicia el carrusel cuando llega al último bloque
+            } else if (index < 0) {
+                currentSlide = totalBlocks - 1; // Permite navegar hacia atrás
+            } else {
+                currentSlide = index;
+            }
+    
+            const newTransformValue = -currentSlide * 282; // Mueve el contenedor según el bloque actual
+            document.querySelector('.carrusel-container').style.transform = `translateX(${newTransformValue}px)`;
+        }
+    
+        function moveSlide(step) {
+            showSlide(currentSlide + step);
+        }
+    
+        // Función para iniciar el cambio automático
+        function startAutoPlay() {
+            setInterval(() => {
+                moveSlide(1); // Cambia al siguiente bloque automáticamente
+            }, slideInterval);
+        }
+    
+        showSlide(currentSlide); // Inicializa el carrusel mostrando el primer bloque (1-4)
+        startAutoPlay(); // Inicia el autoplay
+    </script>
+    
+    
+</body>
+</html>

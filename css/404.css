@@ -1,0 +1,30 @@
+  /*ESTILOS 404 */
+  /* Estilo para la página 404 */
+  .error-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .error-section h1 {
+    font-size: 100px;
+    color: #ff4d4d;
+    margin: 0;
+  }
+  
+  .error-section h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .error-section p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .error-buttons a {
+    margin: 0 10px;
+  }
+  

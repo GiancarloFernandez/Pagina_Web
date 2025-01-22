@@ -1,0 +1,247 @@
+/* Barra de navegación */
+nav {
+    width: 100%;
+    height: 99px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0; /* Se queda en la parte superior */
+    left: 0;
+    z-index: 1000; /* Asegura que se quede por encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
+}
+
+/* Contenedor principal de la barra de navegación */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* 100% para que ocupe todo el ancho disponible */
+    max-width: 1012px; /* Esto garantiza que el contenido no se salga del frame de 1920px */
+}
+
+/* Logo */
+nav .logo img {
+    width: 55px;
+    height: 53px;
+    border-radius: 45px; /* Border radius del logo */
+}
+
+/* Lista de ítems del menú */
+nav .nav-items {
+    display: flex;
+    align-items: center;
+    gap: 18px; /* Distancia entre cada ítem */
+}
+
+/* Estilo de los ítems del menú */
+nav .nav-items li {
+    list-style: none;
+}
+
+nav .nav-items a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #000000; /* Color de texto por defecto */
+    padding: 0 10px;
+}
+
+/* Espaciado y tamaño de los ítems */
+nav .nav-items li a:nth-child(1) { width: 65px; }  /* Inicio */
+nav .nav-items li a:nth-child(2) { width: 179px; } /* Catálogo de libros */
+nav .nav-items li a:nth-child(3) { width: 86px; }  /* Cursos */
+nav .nav-items li a:nth-child(4) { width: 116px; } /* Diplomados */
+nav .nav-items li a:nth-child(5) { width: 227px; } /* Coach en Investigación */
+nav .nav-items li a:nth-child(6) { width: 158px; } /* Contáctanos */
+  
+  /* Ajuste para el contenido debajo de la barra de navegación */
+  body {
+    padding-top: 99px; /* Añadir espacio suficiente para que no se oculte el contenido detrás de la barra */
+  }
+  
+  /* Estilo para las secciones */
+  section {
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Sección: Acelera tu investigación */
+  #acelera-investigacion {
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  #acelera-investigacion h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #acelera-investigacion p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  #acelera-investigacion img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  /* Sección: ¿Qué ofrecemos? */
+  #que-ofrecemos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 40px;
+  }
+  
+  #que-ofrecemos img {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  #que-ofrecemos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  #que-ofrecemos p {
+    font-size: 20px;
+    color: #555;
+    width: 50%;
+  }
+  
+  /* Sección: ¿Por qué elegirnos? */
+  #por-que-elegirnos {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e7e7e7;
+    padding: 40px;
+  }
+  
+  #por-que-elegirnos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    width: 50%;
+  }
+  
+  #por-que-elegirnos p {
+    font-size: 20px;
+    color: #555;
+    width: 50%;
+  }
+  
+  #por-que-elegirnos img {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+  }
+  
+  /* Sección: ¿A quién va dirigido nuestro servicio? */
+  #dirigido-a {
+    background-color: #f4f4f4;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  #dirigido-a h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  #dirigido-a p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Sección: Contáctanos */
+  #contactanos {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #contactanos button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  #contactanos button:hover {
+    background-color: #45a049;
+  }
+  
+ /* Footer */
+footer {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    margin-top: auto; /* Hace que el footer se mueva al final */
+}
+
+footer .contacto p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+footer .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+footer .redes a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+footer .redes a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #catalogo .book-container {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    #catalogo h1 {
+        font-size: 32px;
+    }
+
+    .book {
+        width: 100%; /* Asegura que los libros ocupen el 100% de su celda */
+    }
+
+    footer .contacto p {
+        font-size: 16px;
+    }
+
+    footer .redes a img {
+        width: 30px;
+        height: 30px;
+    }
+}

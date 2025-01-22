@@ -10,3 +10,13 @@ function moveCarousel() {
 
 // Cambiar la imagen cada 10 segundos
 setInterval(moveCarousel, 10000);
+
+// Código para el efecto de difuminado en la barra de navegación
+document.addEventListener("scroll", function () {
+  const navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
